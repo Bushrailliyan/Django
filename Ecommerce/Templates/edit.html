@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<style>
+body{
+    background-image: url("./static/image/blue wallpaper.jpg");
+    background-size:100%;
+    background-repeat:no repeat;
+
+   }
+
+input[type=text], select {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+<!--div {-->
+<!--  border-radius: 5px;-->
+<!--  background-color: #f2f2f2;-->
+<!--  padding: 20px;-->
+<!--}-->
+form{
+    background-color:green;
+   height: 220px;
+    width: 550px;
+    top: 20%;
+    left: 60%;
+     margin-top:100px ;
+    margin-left:500px ;
+}
+</style>
+<body>
+
+
+<div>
+
+<form action="del" method="post">
+    {% csrf_token %}
+    Type Item Name to Delete:<input type="text" name="name"><br><br>
+    <input type="submit" value="Delete"><br>
+
+    {{msg}}<br>
+</form>
+
+<form action="update" method="post">
+    {% csrf_token%}
+    *****Update Item*****<br><br>
+    Old name: <input type="text" name="oldname"><br><br>
+    New name: <input type="text" name="newname"><br><br>
+    <input type="submit" value="Update Product">
+
+    <p>
+        {{msg1}}
+    </p>
+<br>
+</form>
+
+
+<form action="logout">
+    <input type="submit" value="logout">
+    </form>
+</div>
+</body>
+</html>

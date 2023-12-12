@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+ body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+}
+
+input{
+	width: 40%;
+	height: 30px;
+
+}
+form{
+    background-color:#0a062e;
+   height: 520px;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+     margin-top:50px ;
+    margin-left:100px ;
+}
+ p,ul{
+color:#fff;
+font-size:15px;
+padding:30 10px;
+position: relative;
+ margin-top:50px
+
+}
+
+.signup{
+	width: 60%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: #573b8a;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 70px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+	}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<form method="POST">
+    {%csrf_token %}
+    {{form.as_p}}
+
+    <input  class="signup" type="submit" value="SignUp">
+
+        {{msg}}
+</form>
+</body>
+</html>
