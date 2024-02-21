@@ -1,0 +1,30 @@
+{% extends 'forabout.html' %}
+
+{% load static %}
+{% block title %}Status{% endblock %}
+{% block content %}
+
+<form action="statusview">
+<input type="submit" value="Work Status">
+    <table class="menu" border="1">
+        <tr>
+            <td> ID</td>
+            <td >Category</td>
+            <td >ServiceProviders</td>
+            <td >Work Status</td>
+        </tr>
+        {% for i in statusview %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.category}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.status}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</form><br><br>
+<form action="back">
+    <input type="submit" value="BACK">
+</form>
+{% endblock %}

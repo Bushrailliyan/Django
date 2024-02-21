@@ -1,0 +1,21 @@
+{% extends 'design.html' %}
+{% load static %}
+{% block title%}tenants login page{% endblock %}
+{% block content %}
+<form action="reqst" >
+  <input type="submit" value="View Request">
+</form><br><br>
+
+<form action="statusview" >
+  <input type="submit" value="View status">
+</form><br><br>
+
+<form action="put" >
+  <input type="submit" value="Put Status">
+</form><br><br>
+
+<form action="signout">
+  <input type="submit" value="Logout">
+</form>
+{{username}}
+{% endblock %}

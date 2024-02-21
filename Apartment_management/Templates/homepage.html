@@ -1,0 +1,38 @@
+<html>
+<title>Loginpage</title>
+<head>
+    <style>
+
+        body{
+    background-color: #0d0a0b;
+    background-image: linear-gradient(315deg, #0d0a0b 0%, #009fc2 74%);
+
+
+   }
+
+#bg{
+    background-size: 1800px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+div {
+  font-size: 2rem;
+  text-align: center;
+   line-height: 1.4;
+
+}
+
+    </style>
+</head>
+<body>
+<h1>Welcomes you</h1>
+<div class="col-lg-6">
+    <a href="{% url 'tenantpage' %}">Tenants</a>
+</div>
+<div class="col-lg-6">
+    <a href="{% url 'servicepage' %}">Service Providers</a>
+</div>
+</body>
+</html>
+

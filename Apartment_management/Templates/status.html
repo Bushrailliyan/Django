@@ -1,0 +1,32 @@
+{% extends 'forabout.html' %}
+
+{% load static %}
+{% block title %}Status{% endblock %}
+{% block content %}
+
+<form action="putstatus" method="post">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Add Status">
+  {{msg}}
+
+
+</form><br><br>
+<form action="updatestatus" method="POST">
+    {% csrf_token%}
+    *****Update Item*****<br><br>
+    Old Choice: <input type="text" name="oldchoice"><br><br>
+    Updated: <input type="text" name="newchoice"><br><br>
+    <input type="submit" value="Update Status">
+
+    <p>
+        {{msg1}}
+    </p>
+<br>
+</form><br><br>
+
+<form action="back">
+    <input type="submit" value="BACK">
+</form>
+
+{% endblock %}

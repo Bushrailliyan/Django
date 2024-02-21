@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title%}{% endblock%}</title>
+  <style>
+    body{
+    background-color: #0d0a0b;
+    background-image: linear-gradient(315deg, #0d0a0b 0%, #009fc2 74%);
+
+
+   }
+
+#bg{
+    background-size: 1800px 900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+div{
+height: 450px;
+    width: 400px;
+    background-color: #244234;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 20%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+
+}
+
+table {
+        font-family:arial,Sans-serif;
+
+  border-collapse: collapse;
+  width: 40%;
+  align:right;
+  margin-left: auto;  /* to move tables using below codes */
+  margin-right: auto;
+  margin-top:100px;
+padding-top: 100px;
+}
+table.menu{
+    margin-top:100px ;
+    margin-left:800px ;
+}
+th, td {
+  text-align: left;
+  padding: 15px;
+  fore-color:red;
+
+}
+
+
+tr:nth-child(even){background-color: #b3d9ff}
+
+tr {
+  background-color: #003366;
+  color: #cc6600;
+}
+
+
+
+input[type=submit] {
+  width: 20%;
+  background-color: #003366;
+  font-size:20px;
+  color: #cc6600;
+  padding: 14px 20px;
+  margin-left: 25%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+input[type=text], select {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color:#b3d9ff;
+}
+label{
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+
+  </style>
+</head>
+<body>
+{% block content %}{% endblock %}
+</body>
+</html>

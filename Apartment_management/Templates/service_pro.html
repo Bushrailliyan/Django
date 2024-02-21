@@ -1,0 +1,36 @@
+{% extends 'tenants.html' %}
+{% block title %}SP{% endblock %}
+
+
+{% block content %}
+<form action="providers" method="post">
+    {%csrf_token %}
+    <!--- <input type="submit" value="Show">--->
+     <table border="1">
+        <tr>
+            <td>Id</td>
+            <td> Name</td>
+            <td> Age</td>
+            <td> Address</td>
+            <td> Category</td>
+            <td> Mobile</td>
+            <td> Languages Known</td>
+            <td>Photo</td>
+
+        </tr>
+        {% for i in servicedetails %}
+
+        <tr>
+            <td>{{i.id}}</td>
+            <td> {{i.name}}</td>
+            <td >{{i.age}}</td>
+            <td >{{i.address}}</td>
+            <td >{{i.service_category}}</td>
+            <td> {{i.mobile}}</td>
+            <td> {{i.language_known}}</td>
+            <td><img src="{{i.photo.url}}" height="30" width="30"> </td>
+        </tr>
+        {% endfor %}
+    </table><br>
+</form>
+{% endblock %}

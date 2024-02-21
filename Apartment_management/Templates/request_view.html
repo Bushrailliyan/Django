@@ -1,0 +1,33 @@
+{% extends 'design.html' %}
+{% load static %}
+{% block title%}tenants login page{% endblock %}
+{% block content %}
+
+<form action="reqstview">
+<input type="submit" value="View Request">
+    <table class="menu" border="1">
+        <tr>
+            <td> ID</td>
+            <td >Service Needed</td>
+            <td >Tenant Name</td>
+            <td >House</td>
+            <td >Complaint Description</td>
+        </tr>
+        {% for i in reqstview %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.service_needed}}</td>
+            <td>{{i.tenant_name}}</td>
+            <td>{{i.house}}</td>
+            <td>{{i.complaint_desc}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</form><br><br>
+
+<form action="back">
+    <input type="submit" value="BACK">
+</form>
+
+{% endblock %}

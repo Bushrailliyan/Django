@@ -1,0 +1,16 @@
+{% extends 'forabout.html' %}
+
+{% load static %}
+{% block title %}Request{% endblock %}
+{% block content %}
+<form action="addcompl" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+ <input type="submit" value="SUBMIT REQUEST">
+    {{msg}}
+</form><br><br>
+<form action="back">
+    <input type="submit" value="BACK">
+</form>
+
+{% endblock %}
